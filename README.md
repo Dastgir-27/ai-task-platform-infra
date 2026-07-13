@@ -42,10 +42,15 @@ kubectl create namespace ai-task-platform-staging
 kubectl create secret generic app-secrets \
   --namespace ai-task-platform-staging \
   --from-literal=JWT_SECRET="$(openssl rand -hex 32)"
-```
 
-> **Note:** GHCR images must be public (GitHub → package → settings → visibility), or
-> add an `imagePullSecret` to the deployments.
+# 3. Registry credentials for pulling images from GHCR
+#    (skip if the GHCR packages are public)
+kubectl create secret docker-registry ghcr-creds \
+  --namespace ai-task-platform \
+  --docker-server=ghcr.io \
+  --docker-username=<github-username> \
+  --docker-password=<github-token-with-read:packages>
+```
 
 ## Argo CD installation
 
