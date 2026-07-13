@@ -4,18 +4,18 @@ kind: Kustomization
 namespace: ai-task-platform
 
 resources:
-  - namespace.yaml
-  - ../../base
+- namespace.yaml
+- ../../base
 
 # Image tags below are updated automatically by the application repo's
 # CI pipeline (kustomize edit set image); Argo CD then syncs the change.
 images:
-  - name: ghcr.io/OWNER/ai-task-backend
-    newName: ghcr.io/dastgir-27/ai-task-backend
-    newTag: latest
-  - name: ghcr.io/OWNER/ai-task-worker
-    newName: ghcr.io/dastgir-27/ai-task-worker
-    newTag: latest
-  - name: ghcr.io/OWNER/ai-task-frontend
-    newName: ghcr.io/dastgir-27/ai-task-frontend
-    newTag: latest
+- name: ghcr.io/OWNER/ai-task-backend
+  newName: ghcr.io/dastgir-27/ai-task-backend
+  newTag: 34e925c2b9c13c6a41e0eeb3d7732d1905e905d5
+- name: ghcr.io/OWNER/ai-task-frontend
+  newName: ghcr.io/dastgir-27/ai-task-frontend
+  newTag: 34e925c2b9c13c6a41e0eeb3d7732d1905e905d5
+- name: ghcr.io/OWNER/ai-task-worker
+  newName: ghcr.io/dastgir-27/ai-task-worker
+  newTag: 34e925c2b9c13c6a41e0eeb3d7732d1905e905d5
