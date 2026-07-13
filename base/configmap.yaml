@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  MONGO_URI: mongodb://mongo:27017/ai-task-platform
+  REDIS_URL: redis://redis:6379
+  TASK_STREAM: tasks:stream
+  TASK_GROUP: task-workers
+  CORS_ORIGIN: "*"
