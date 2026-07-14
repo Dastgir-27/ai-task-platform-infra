@@ -12,10 +12,10 @@ resources:
 images:
 - name: ghcr.io/OWNER/ai-task-backend
   newName: ghcr.io/dastgir-27/ai-task-backend
-  newTag: 34e925c2b9c13c6a41e0eeb3d7732d1905e905d5
+  newTag: 744eca3638b76243f803dbbba6be9f9977188da6
 - name: ghcr.io/OWNER/ai-task-frontend
   newName: ghcr.io/dastgir-27/ai-task-frontend
-  newTag: 34e925c2b9c13c6a41e0eeb3d7732d1905e905d5
+  newTag: 744eca3638b76243f803dbbba6be9f9977188da6
 - name: ghcr.io/OWNER/ai-task-worker
   newName: ghcr.io/dastgir-27/ai-task-worker
-  newTag: 34e925c2b9c13c6a41e0eeb3d7732d1905e905d5
+  newTag: 744eca3638b76243f803dbbba6be9f9977188da6
